@@ -6,7 +6,7 @@
 /*   By: aaycan <aaycan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 00:31:51 by aaycan            #+#    #+#             */
-/*   Updated: 2026/03/26 02:21:25 by aaycan           ###   ########.fr       */
+/*   Updated: 2026/03/26 02:46:43 by aaycan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	PhoneBook::displaySpecificContact() const
 	std::cout << "Enter index to display details: ";
 	if (!(std::getline(std::cin, input)) || input.empty())
 		return;
-	if (input.length() == 1 && input[0] >= '0' && input[0] < '0' + this->_total)
+	if ((input.length() == 1) && (input[0] >= '0') && (input[0] < '0' + this->_total))
 	{
 		int idx = input[0] - '0';
 		this->_contacts[idx].displayContact();
